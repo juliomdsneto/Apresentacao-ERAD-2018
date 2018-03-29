@@ -45,7 +45,7 @@
 
 \setbeamertemplate{navigation symbols}{}
 
-\pgfdeclareimage[height=.5cm]{logo}{imgs/lups_oficial.png}
+\pgfdeclareimage[height=.5cm]{logo}{imgs/lupsoficial.png}
 
 \logo{\pgfuseimage{logo}}
 
@@ -110,9 +110,9 @@
   \begin{block}{}
   \begin{itemize}
   \item Datadog
-    \item Logic Monitor
+    \item LogicMonitor
     \item AppDynamics
-    \item New Relic
+    \item NewRelic
     \item Ganglia
     \end{itemize}
   \end{block}
@@ -120,11 +120,11 @@
 
 \frame {
   \frametitle{Datadog}
-  \begin{exampleblock}{Objetivo}
+  \begin{alertblock}{Objetivo}
   \begin{itemize}
   \item Monitoramento de aplicações de alto desempenho.
     \end{itemize}
-  \end{exampleblock}
+  \end{alertblock}
   \begin{block}{Características}
   \begin{itemize}
   \item Open-source;
@@ -135,13 +135,14 @@
 }
 
 \frame {
-  \frametitle{Logic Monitor}
-  \begin{exampleblock}{Objetivo}
+  \frametitle{LogicMonitor}
+  \begin{alertblock}{Objetivo}
   \begin{itemize}
-  \item Prover monitoramento de aplicações multicamada (SaaS,PaaS,IaaS);
-  \item Prover mecanismos de segurança e controle de accesso.
+  \item Centralizar a visualização de vários sistemas;
+  \item Monitorar sistemas on-premises, cloud e híbridos;
+  \item 
     \end{itemize}
-  \end{exampleblock}
+  \end{alertblock}
   \begin{block}{Características}
   \begin{itemize}
   \item SaaS;
@@ -153,12 +154,12 @@
 
 \frame {
   \frametitle{AppDynamics}
-  \begin{exampleblock}{Objetivo}
+  \begin{alertblock}{Objetivo}
   \begin{itemize}
   \item Monitomento de aplicações de alto desempenho;
   \item Design modular e configurável.
     \end{itemize}
-  \end{exampleblock}
+  \end{alertblock}
   \begin{block}{Características}
   \begin{itemize}
   \item Solução pertencente a Cisco;
@@ -189,7 +190,7 @@
 }
 
 \frame {
-  \frametitle{Gangliga}
+  \frametitle{Ganglia}
   \begin{alertblock}{Objetivo}
   \begin{itemize}
   \item Monitoramento de aplicações distribuídas, como \textit{clusters} e \textit{grids}; 
@@ -209,41 +210,45 @@
 \frame {
   \frametitle{Comparação}
   \begin{table}[!ht]
-    \begin{tabular}{c c c }
-  Monitores & Open Source & Principal Funcionalidade   \\ \hline
-    Datadog      &   Sim & Aplicações de alta performace\\\hline
-    Logic Monitor      &   Não & Controle e Segurança \\\hline
-    AppDynamics      &   Não & Aplicações de alto desempenho\\\hline
-    New Relic      &   Não & Coleta de dados em tempo real \\\hline
-    Ganglia      &   Sim & Alta performace (Clusters e Grids) \\
+    \begin{tabular}{c c c c}
+    Monitores    & Tipo        & Código        & Foco do monitoramento \\ \hline \hline
+    Ganglia      & Self-hosted & Open-source   & Clusters e Grids      \\ \hline
+    Datadog      & SaaS        & Open-source   & Alto Desempenho       \\ \hline
+    AppDynamics  & SaaS        & Closed-source & Alto desempenho       \\ \hline
+    LogicMonitor & SaaS        & Closed-source & Múltiplos Sistemas    \\ \hline
+    NewRelic     & SaaS        & Closed-source & Tempo real            \\ \hline
     \end{tabular}
-  \caption{Tabela Comparativa dos Monitores.}
+  \caption{Comparativo entre os monitores.}
   \end{table}
 }
 
-\section{Conclusão}
+\section{Conclusão} \label{sec:conclusao}
 
 \frame {
   \frametitle{Conclusão}
-  \begin{block}{Conclusão}
+  \begin{exampleblock}{Relevência}
   \begin{itemize}
-  \item O monitoramento da Nuvem está envolvido em praticamente todas as tarefas que caracterizam a Computação em Nuvem.
+  \item Monitoramento permite a visualização de alto nível, tanto da infraestrutura quanto do \textit{software};
+  \item Minimiza o tempo de \textit{downtime} com alertas;
+  \item Centraliza informações de infraestruturas distintas.
     \end{itemize}
-  \end{block}
-  \begin{block}{Continuidade}
+  \end{exampleblock}
+  \begin{block}{Trabalhos Futuros}
   \begin{itemize}
-  \item Na continuidade deste trabalho será feita uma análise de consumo de \textit{cpu} e memória destas ferramentas. Em seguida será desenvolvido uma ferramenta de monitoramento de Nuvens de baixo consumo.
+  \item Análise de consumo de \textit{cpu} e memória das ferramentas;
+  \item Desenvolvimento de uma ferramenta de monitoramento para nuvens.
     \end{itemize}
   \end{block}
 }
 
 \frame {
   \frametitle{Agradecimentos}
-  \begin{itemize}
-  \item Grupo de Pesquisa: LUPS
-    \end{itemize}
+  \centering
+  \includegraphics{imgs/lupsoficial.png}
   \begin{block}{Mais informações:}
-  \textbf{E-mail:} \texttt{jmdsneto@inf.ufpel.edu.br}
+  \textbf{E-mail:} \texttt{jmdsneto@inf.ufpel.edu.br} \\
+  \textbf{E-mail:} \texttt{vaataides@inf.ufpel.edu.br} \\
+  \textbf{E-mail:} \texttt{jvvtdoliveira@inf.ufpel.edu.br}
   \end{block}
 }
 \end{document}

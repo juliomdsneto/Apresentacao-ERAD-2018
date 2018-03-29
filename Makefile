@@ -1,11 +1,12 @@
 # Julio`s presentation makefile
 FILE=main
+PDFLATEXOPTS=-synctex=1 -interaction=nonstopmode
 
 $(FILE).pdf: beamerthemeAmsterdam.sty $(FILE).tex 
-	pdflatex $(FILE).tex 
+	pdflatex $(PDFLATEXOPTS) $(FILE).tex 
 	bibtex $(FILE).aux
-	pdflatex $(FILE).tex 
-	pdflatex $(FILE).tex
+	pdflatex $(PDFLATEXOPTS) $(FILE).tex 
+	pdflatex $(PDFLATEXOPTS) $(FILE).tex
 	make clean
 
 clean:

@@ -5,7 +5,8 @@ $(FILE).pdf: beamerthemeAmsterdam.sty $(FILE).tex
 	pdflatex $(FILE).tex 
 	bibtex $(FILE).aux
 	pdflatex $(FILE).tex 
-	pdflatex $(FILE).tex 
+	pdflatex $(FILE).tex
+	make clean
 
 clean:
 	rm *.aux *.bbl *.blg *.log *.nav *.out *.snm *.toc

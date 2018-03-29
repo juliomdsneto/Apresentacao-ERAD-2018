@@ -13,9 +13,9 @@
 \usepackage{url}
 \usepackage{underscore}
 \usepackage{amsmath}
+
 \usefonttheme{structurebold}
 
-%==================================================================================
 \definecolor{DarkGreen}{rgb}{0,.5,0}
 \definecolor{DarkRed}{rgb}{.5,0,0}
 \definecolor{DarkBlue}{rgb}{0,0,.5}
@@ -23,7 +23,6 @@
 \newcommand{\x}{\textbf{\textcolor{DarkGreen}{$\surd$}}}
 \newcommand{\xx}{\textbf{\textcolor{DarkBlue}{$\odot$}}}
 \newcommand{\xxx}{\textbf{\textcolor{DarkRed}{$\times$}}}
-%==================================================================================
 
 \usepackage{listings}
 \renewcommand{\lstlistingname}{Programa}
@@ -40,222 +39,190 @@
     stringstyle=\ttfamily,
     showstringspaces=false
 }
-
-%==================================================================================
-
 \usetheme{Amsterdam}
 
-%==================================================================================
-
 \usecolortheme{default}
+
 \setbeamertemplate{navigation symbols}{}
 
-% inserir logotipo na apresentação
 \pgfdeclareimage[height=.5cm]{logo}{imagens/lups_oficial.png}
-\logo{\pgfuseimage{logo}}
-\setbeameroption{hide notes}
-% \logo{%
-  %     \includegraphics[width=1cm,height=1cm,keepaspectratio]{img/FAPERGS.jpg}
-  %     \hspace{9.9cm}
-  %     \pgfuseimage{logo}
-  %     \hspace{0.1cm}
-  % }
-  % \pgfdeclareimage[height=1.5cm]{capes}{img/CAPES.png}
-  % \capes{%
-    %     \pgfuseimage{capes}
-    %     \hspace{9.9cm}
-    %     \includegraphics[width=1cm,height=1cm,keepaspectratio]{img/CAPES.png}
-    %     \hspace{1.1cm}
-    % }
-    \setbeameroption{hide notes}
-    %==================================================================================
 
-    \title[]{Um Estudo sobre Ferramentas de Monitoramento de Nuvens}
-    \author[]{por \\~\\ 
-      \textbf{Julio Machado, João Vítor Oliveira, Vitor Alano, \\ 
-        Maurício Pilla e Laércio Pilla} \\
-        Universidade Federal de Pelotas\\
-        Ciência da Computação\\
-        \small{Centro de Desenvolvimento Tecnológico}\
-        ERAD 2018\\
-    }
+\logo{\pgfuseimage{logo}}
+
+\setbeameroption{hide notes}
+\setbeameroption{hide notes}
+
+\title[]{Um Estudo sobre Ferramentas de Monitoramento de Nuvens}
+\author[]{por \\~\\ 
+  \textbf{Julio Machado, João Vítor Oliveira, Vitor Alano, \\ Maurício Pilla e Laércio Pilla} \\
+    Universidade Federal de Pelotas \\
+    Ciência da Computação \\
+    \small{Centro de Desenvolvimento Tecnológico}\
+    ERAD 2018\\
+}
 
 \date{Abril -- 2018  -- Porto Alegre/RS}
 
-%==================================================================================
-
 \begin{document}
-\frame[label=titlepage]{\titlepage \vspace{-1cm} 
+
+\frame[label=titlepage]{
+  \titlepage
 }
 
-
-\frame{
+\frame {
   \frametitle{Sumário}
   \tableofcontents
+}
 
-    \section{Introdução}
+\section{Introdução} \label{sec:introducao}
 
+\frame {
+  \frametitle{Introdução}
+  \begin{figure} \label{sec:introducao;fig:nuvem}
+  \centering \includegraphics[scale=.35]{imagens/data-center-ias.png}
+  \end{figure}
+}
 
-  %1
-    \frame{
-      \frametitle{Introdução}
+\section{Monitoramento} \label{sec:monitoramento}
 
-      \begin{figure}
-      \centering \includegraphics[scale=.3]{imagens/data-center.png}
-      \caption { Data center }
-      \end{figure}
-
-
-    }
-  %2
-    \frame{
-      \frametitle{Introdução}
-
-      \begin{figure}
-      \centering \includegraphics[scale=.3]{imagens/data-center-vms.png}
-      \caption { Data center com máquinas virtuais }
-      \end{figure}
-
-
-    }
-
-  %3
-    \frame{
-      \frametitle{Introdução}
-
-      \begin{figure}
-      \centering \includegraphics[scale=.3]{imagens/data-center-ias.png}
-      \caption { Nuvem }
-      \end{figure}
-    }
-
-
-  \section{Monitoramento}
-  \frame{
-    \frametitle{Monitoramento}
-
-    \begin{block}{Importância do Monitoramento:}
-    Por um lado, permite o controle de como o \textit{hardware} e \textit{software} estão sendo utilizados. Por outro lado, provê informações de desempenho e indicações de possíveis comportamentos em plataformas e aplicações.    
-      \end{block}
-  }
-
-  \frame{
-    \frametitle{Monitoramento}
-
-    \begin{block}{Ferramentas:}
+\frame {
+  \frametitle{Monitoramento}
+  \begin{block}{Relevância em uma nuvem}
     \begin{itemize}
-    \item DataDog
+      \item Permite a coleta e visualização de informações físicas;
+      \item Auxilia no diagnóstico de problemas sutis;
+      \item Provê transparência do desempenho de uma máquina.
+    \end{itemize}
+  \end{block}
+  \begin{block}{Ferramental}
+    \begin{itemize}
+      \item Muitas soluções no mercado, 5 foram selecionadas;
+      \item Preços variados;
+      \item Possuem funcionalidades em comum;
+    \end{itemize}
+  \end{block}
+}
+
+\frame {
+  \frametitle{Ferramentas de Monitoramento}
+  \begin{block}{}
+    \begin{itemize}
+      \item Datadog
       \item Logic Monitor
       \item AppDynamics
       \item New Relic
       \item Ganglia
-      \end{itemize}
+    \end{itemize}
+  \end{block}
+}
 
-    \end{block}
-  }
+\section{Ferramentas de Monitoramento} \label{sec:ferramentas_de_monitoramento}
 
-
-  \section{Ferramentas de Monitoramento}
-  \frame{
-    \frametitle{Ferramentas}
-
-    \begin{block}{DataDog:}
-    É um monitor que tem como principal finalidade o monitoramento escalar de nuvens e o monitoramento de aplicações de alta performace. É \textit{open-source} e a documentação e integração das plataformas é feita pela comunidade. Sua interface permite visualizar os dados de diversas formas.
-      \end{block}
-  }
-
-  \frame{
-    \frametitle{Ferramentas}
-    \begin{block}{Logic Monitor:}
-    É um monitor SaaS de código fechado utilizado por empresas como: Adidas, Siemens, Sophos e outros. O foco do Logic Monitor é prover não só o monitoramento das plataformas em camadas, permitindo o controle de fácil acesso, como também em segurança.
-      \end{block}
-  }
-
-  \frame{
-    \frametitle{Ferramentas}
-    \begin{block}{AppDynamics:}
-    Tem como principal funcionalidade monitorar aplicações de alto desempenho. É constituído por alguns componentes configuráveis: \textit{controller}, \textit{MySQL database}, \textit{events service}, e opcionalmente \textit{end user monitoring} (EUM) \textit{server}. O AppDynamics está disponível para os sistemas Linux e Windows.
-      \end{block}
-  }
-
-
-  \frame{
-    \frametitle{Ferramentas}
-    \begin{block}{NewRelic:}
-    É um sistema de monitoramento dinâmico e flexível. Com foco em coleta de dados em tempo real. Assim, um alerta é enviado ao usuário logo que algo pré espeficicado pelo próprio usuário em um filtro der errado.
-      \end{block}
-  }
-
-  \frame{
-    \frametitle{Ferramentas}
-    \begin{block}{Ganglia:}
-    É um sistema de monitoramento distribuído voltado a computação de alta performace, como \textit{clusters} e \textit{grids}. Utiliza XML para representação dos dados, XDR para compactação e transferência de dados e RRDtool para armazenamento e visualização.
-      \end{block}
-  }
-
-  %TABELA
-
-
-
-    \frame{
-      \frametitle{Comparação}
-      \begin{table}[!ht]
-
-        \begin{tabular}{c c c }
-      Monitores & Open Source & Principal Funcionalidade   \\ \hline
-        DataDog      &   Sim & Aplicações de alta performace\\\hline
-        Logic Monitor      &   Não & Controle e Segurança \\\hline
-        AppDynamics      &   Não & Aplicações de alto desempenho\\\hline
-        New Relic      &   Não & Coleta de dados em tempo real \\\hline
-        Ganglia      &   Sim & Alta performace (Clusters e Grids) \\
-        \end{tabular}
-      \caption{Tabela Comparativa dos Monitores.}
-      \end{table}
-    }
-
-
-  \section{Conclusão}
-
-
-  \frame{
-    \frametitle{Conclusão}
-    \begin{block}{Conclusão}
+\frame {
+  \frametitle{Datadog}
+  \begin{block}{Objetivo}
     \begin{itemize}
-    \item O monitoramento da Nuvem está envolvido em praticamente todas as tarefas que caracterizam a Computação em Nuvem.
-      \end{itemize}
-
-    \end{block}
-    \begin{block}{Continuidade}
+      \item Monitoramento de aplicações de alta performance.
+    \end{itemize}
+   É \textit{open-source} e a documentação e integração das plataformas é feita pela comunidade. Sua interface permite visualizar os dados de diversas formas.
+  \end{block}
+  \begin{block}{Características}
     \begin{itemize}
-    \item Na continuidade deste trabalho será feita uma análise de consumo de \textit{cpu} e memória destas ferramentas. Em seguida será desenvolvido uma ferramenta de monitoramento de Nuvens de baixo consumo.
+      \item Open-source;
+      \item Documentação mantida pela comunidade;
+      \item Interface web.
+    \end{itemize}
+  \end{block}
+}
 
-      \end{itemize}
-
-    \end{block}
-
-  }
-
-
-
-
-  \frame{
-    \frametitle{Agradecimentos}
-
+\frame {
+  \frametitle{Logic Monitor}
+  \begin{block}{Objetivo}
     \begin{itemize}
+      \item Prover monitoramento de aplicações multicamada (SaaS,PaaS,IaaS);
+      \item Prover mecanismos de segurança e controle de accesso.
+    \end{itemize}
+  \end{block}
+  \begin{block}{Características}
+    \begin{itemize}
+      \item Solução SaaS;
+      \item Closed-source;
+      \item Foco em segurança e confiabilidade.
+    \end{itemize}
+  \end{block}
+}
 
-    \item Grupo de Pesquisa: LUPS
-      \end{itemize}
+\frame {
+  \frametitle{AppDynamics}
+  \begin{block}{Objetivo}
+    \begin{itemize}
+      \item Monitomento de aplicações de alta performance;
+      \item Design modular e configurável.
+    \end{itemize}
+  \end{block}
+  \begin{block}{Características}
+    \begin{itemize}
+      \item Solução pertencente a Cisco;
+      \item Closed-source;
+      \item Disponível apenas para Linux e Windows;
+      \item 4 áreas de atuação, end-user, application, business e infrastructure.
+    \end{itemize}
+  \end{block}
+}
 
-    \begin{block}{Mais informações:}
-    \textbf{E-mail:} \texttt{jmdsneto@inf.ufpel.edu.br}
-
+\frame {
+  \frametitle{Ferramentas}
+  \begin{block}{NewRelic:}
+  É um sistema de monitoramento dinâmico e flexível. Com foco em coleta de dados em tempo real. Assim, um alerta é enviado ao usuário logo que algo pré espeficicado pelo próprio usuário em um filtro der errado.
     \end{block}
-  }
-  %==================================================================================
+}
 
-    \end{document}
-  %==================================================================================
+\frame {
+  \frametitle{Ferramentas}
+  \begin{block}{Ganglia:}
+  É um sistema de monitoramento distribuído voltado a computação de alta performace, como \textit{clusters} e \textit{grids}. Utiliza XML para representação dos dados, XDR para compactação e transferência de dados e RRDtool para armazenamento e visualização.
+    \end{block}
+}
 
-    % \bibitem{norman} E. H. Norman {\em Japan's emergence as a modern
-      %   state} 1940: International Secretariat, Institute of Pacific
-      %   Relations.
+\frame {
+  \frametitle{Comparação}
+  \begin{table}[!ht]
+    \begin{tabular}{c c c }
+  Monitores & Open Source & Principal Funcionalidade   \\ \hline
+    Datadog      &   Sim & Aplicações de alta performace\\\hline
+    Logic Monitor      &   Não & Controle e Segurança \\\hline
+    AppDynamics      &   Não & Aplicações de alto desempenho\\\hline
+    New Relic      &   Não & Coleta de dados em tempo real \\\hline
+    Ganglia      &   Sim & Alta performace (Clusters e Grids) \\
+    \end{tabular}
+  \caption{Tabela Comparativa dos Monitores.}
+  \end{table}
+}
+
+\section{Conclusão}
+
+\frame {
+  \frametitle{Conclusão}
+  \begin{block}{Conclusão}
+  \begin{itemize}
+  \item O monitoramento da Nuvem está envolvido em praticamente todas as tarefas que caracterizam a Computação em Nuvem.
+    \end{itemize}
+  \end{block}
+  \begin{block}{Continuidade}
+  \begin{itemize}
+  \item Na continuidade deste trabalho será feita uma análise de consumo de \textit{cpu} e memória destas ferramentas. Em seguida será desenvolvido uma ferramenta de monitoramento de Nuvens de baixo consumo.
+    \end{itemize}
+  \end{block}
+}
+
+\frame {
+  \frametitle{Agradecimentos}
+  \begin{itemize}
+  \item Grupo de Pesquisa: LUPS
+    \end{itemize}
+  \begin{block}{Mais informações:}
+  \textbf{E-mail:} \texttt{jmdsneto@inf.ufpel.edu.br}
+  \end{block}
+}
+\end{document}
+

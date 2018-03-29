@@ -6,7 +6,7 @@ $(FILE).pdf: beamerthemeAmsterdam.sty $(FILE).tex
 	pdflatex $(PDFLATEXOPTS) $(FILE).tex 
 	pdflatex $(PDFLATEXOPTS) $(FILE).tex 
 	pdflatex $(PDFLATEXOPTS) $(FILE).tex
-	make clean
+	rm *.aux *.bbl *.blg *.log *.nav *.out *.snm *.toc
 
 clean:
-	rm *.aux *.bbl *.blg *.log *.nav *.out *.snm *.toc
+	rm *.aux *.bbl *.blg *.log *.nav *.out *.snm *.toc *.pdf

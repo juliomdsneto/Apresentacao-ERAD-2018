@@ -4,7 +4,6 @@ PDFLATEXOPTS=-synctex=1 -interaction=nonstopmode
 
 $(FILE).pdf: beamerthemeAmsterdam.sty $(FILE).tex 
 	pdflatex $(PDFLATEXOPTS) $(FILE).tex 
-	bibtex $(FILE).aux
 	pdflatex $(PDFLATEXOPTS) $(FILE).tex 
 	pdflatex $(PDFLATEXOPTS) $(FILE).tex
 	make clean

@@ -13,9 +13,10 @@
 \usepackage{url}
 \usepackage{underscore}
 \usepackage{amsmath}
-
+\usepackage{tikz}
+\usepackage[absolute,overlay]{textpos}
 \usefonttheme{structurebold}
-
+\usetikzlibrary{calc}
 \definecolor{DarkGreen}{rgb}{0,.5,0}
 \definecolor{DarkRed}{rgb}{.5,0,0}
 \definecolor{DarkBlue}{rgb}{0,0,.5}
@@ -120,6 +121,9 @@
 
 \frame {
   \frametitle{Datadog}
+   \begin{tikzpicture}[remember picture,overlay]
+    \node[xshift=-1cm,yshift=-2cm] at (current page.north east) {\includegraphics[scale=.5]{imgs/datadog.jpg}};
+\end{tikzpicture}
   \begin{alertblock}{Objetivo}
   \begin{itemize}
   \item Monitoramento de aplicações de alto desempenho.
@@ -136,24 +140,29 @@
 
 \frame {
   \frametitle{LogicMonitor}
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[xshift=-1.1cm,yshift=-2cm] at (current page.north east) {\includegraphics[scale=.45]{imgs/logic.png}};
+  \end{tikzpicture}
   \begin{alertblock}{Objetivo}
   \begin{itemize}
   \item Centralizar a visualização de vários sistemas;
   \item Monitorar sistemas on-premises, cloud e híbridos;
-  \item 
-    \end{itemize}
+  \end{itemize}
   \end{alertblock}
   \begin{block}{Características}
   \begin{itemize}
   \item SaaS;
   \item Closed-source;
   \item Foco em segurança e confiabilidade.
-    \end{itemize}
+  \end{itemize}
   \end{block}
 }
 
 \frame {
   \frametitle{AppDynamics}
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[xshift=-1.5cm,yshift=-2cm] at (current page.north east) {\includegraphics[scale=.6]{imgs/appD.png}};
+\end{tikzpicture}
   \begin{alertblock}{Objetivo}
   \begin{itemize}
   \item Monitomento de aplicações de alto desempenho;
@@ -172,6 +181,9 @@
 
 \frame {
   \frametitle{NewRelic}
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[xshift=-1.2cm,yshift=-2cm] at (current page.north east) {\includegraphics[scale=.5]{imgs/new.png}};
+\end{tikzpicture}
   \begin{alertblock}{Objetivo}
   \begin{itemize}
   \item Dinamicidade e flexibilidade;
@@ -191,6 +203,9 @@
 
 \frame {
   \frametitle{Ganglia}
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[xshift=-1.3cm,yshift=-2cm] at (current page.north east) {\includegraphics[scale=.4]{imgs/ganglia.jpg}};
+\end{tikzpicture}
   \begin{alertblock}{Objetivo}
   \begin{itemize}
   \item Monitoramento de aplicações distribuídas, como \textit{clusters} e \textit{grids}; 
